@@ -21,8 +21,6 @@ class Gopls < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "918229b1da008c7ec402d500b24d1a959509df7f34d13a651440a997739fffb3"
   end
 
-  depends_on "go" => :build
-
   def install
     cd "gopls" do
       system "go", "build", *std_go_args

@@ -16,8 +16,6 @@ class Gosec < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "18092cad463d586173b7ca8e7b27e1ba8db1881d684594894e8b9cd350418006"
   end
 
-  depends_on "go"
-
   def install
     system "go", "build", *std_go_args(ldflags: "-X main.version=v#{version}"), "./cmd/gosec"
   end
